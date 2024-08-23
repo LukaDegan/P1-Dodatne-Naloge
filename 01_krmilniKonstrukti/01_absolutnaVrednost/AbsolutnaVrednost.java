@@ -8,3 +8,5 @@ public class AbsolutnaVrednost {
         System.out.println(Math.abs(st));
     }
 }
+
+// 10/10
