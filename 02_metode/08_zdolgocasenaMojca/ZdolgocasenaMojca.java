@@ -24,28 +24,24 @@ public class ZdolgocasenaMojca {
                     System.out.printf("%d ",met);
                 }
                 System.out.printf("| vsota = %d\n", vsota);
-                if(prime(vsota)) {
+                if(jePrastevilo(vsota)) {
                     meci = false;
                 }
             }
         }
     }
     
-    public static boolean prime(int num) {
-        if(num == 1) {
+    public static boolean jePrastevilo(int st) {
+        if(st == 1) {
             return false;
         }
-        boolean flag = false;
-        for(int i = 2; i <= num/2; i++) {
-            if(num % i == 0) {
-                flag = true;
+        boolean jeOK = true;
+        for(int i = 2; i <= st/2; i++) {
+            if(st % i == 0) {
+                jeOK = false;
                 break;
             }
         }
-        if(!flag) {
-            return true;
-        } else {
-            return false;
-        }
+        return jeOK;
     }
 }
